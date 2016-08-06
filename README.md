@@ -107,7 +107,7 @@ However, before the integration you have to delete all instances,
 routers, and networks from your OpenStack deployment. 
 Make sure the ODL host is running and necessary ODL features 
 are installed. You may consult our <a href="http://sciencecloud-community.cs.tu.ac.th/?p=238">
-OpenStack and OpenDayLight integration blog post</a> for more details.  
+OpenStack and OpenDayLight integration blog post</a> or youtube videos in [4] for more details.  
 When ready, run the following commands. 
 
 <pre>
@@ -132,4 +132,5 @@ documents:
 1. http://sciencecloud-community.cs.tu.ac.th/ 
 2. http://vasabilab.cs.tu.ac.th/ 
 3. http://docs.openstack.org/
+4. <a href="https://www.youtube.com/playlist?list=PLmUxMbTCUhr4bjpV3ysL6_G_tokfpNyDb">OpenStack and OpenDayLight integration youtube video</a>
  
