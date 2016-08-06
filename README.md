@@ -13,28 +13,49 @@ of your OpenStack deployment.
 
 To use: 
 <pre>
-$ tar xvf openstack-mitaka-installer-0.x.x.tar
 $ cd openstack-mitaka-installer
 </pre>
 
-modify ./install-paramrc.sh file to set parameter
-values as you'd like. 
+In our example, we follow the example
+configuration parameters in the official installation manual of 
+openstack as illustrated in the picture below.<br> 
+<img src="document/architecture.png"> <br>
+From the figure, we use the same configuration as those of OpenStack installation 
+manual for the managment network, data tunnel network, v-lan network, and external network.
+However, this script still require the followings. 
+<ul>
+<li> The name of the 4 hosts in the figure must be "controller", "network", "compute",
+and "compute1". </li>
+<li> The username of openstack account on every host must be the same. 
+The password of those account must be the same across the hosts as well 
+(but can be different from the username).
+<li> You should make sure that the time on the controller node is up-to-date before installation
+</ul>
+Based on the above configuration and requirements, modify ./install-paramrc.sh file by entering 
+environment variables' values that fit your deployment. 
 <pre>
 $ vi ./install-paramrc.sh
 </pre>
 
-substitute the parameter values in the script 
-template tar file. 
+After that, run the script below to substitute the parameter values in the script 
+template tar file (OPSInstaller-init.tar).  
 
 <pre>
 $ ./exe-config-installer.sh
 </pre>
 
-Install openstack on controller, network, compute, and compute1.
-If you want to install OpenStack mitaka with classic open vswitch 
-network, run the following commands.
+After running the script, you should see a new directory "OPSInstaller" being created. 
+This directory contains all scripts and configuration files that will later be run on every node 
+to install OpenStack.
 
+<strong><u>
+1. install OpenStack mitaka with classic open vswitch network
+</u></strong>
+
+On the controller node. 
 <pre>
+$ cd $HOME
+$ cd openstack-mitaka-installer
 $ cd OPSInstaller/installer
 $ ./OS-installer-00-1...(please fill in the rest of the name)
 $ ./OS-installer-00-2...
@@ -50,10 +71,14 @@ $ ./OS-installer-08-...
 $ ./OS-installer-10-...
 </pre>
 
-In case you want to install OpenStack mitaka and deploy 
-Distributed Virtual Router (DVR) network, run the following commands. 
+<strong><u>
+2. Install OpenStack mitaka and deploy 
+Distributed Virtual Router (DVR) network
+</u></strong>
 
 <pre>
+$ cd $HOME
+$ cd openstack-mitaka-installer
 $ cd OPSInstaller/installer
 $ ./OS-installer-00-1...(please fill in the rest of the name)
 $ ./OS-installer-00-2...
@@ -69,6 +94,10 @@ $ ./OS-installer-09-...
 $ ./OS-installer-10-...
 </pre>
 
+<strong><u>
+2. OpenStack mitaka and OpenSayLight Beryllium Integration 
+</u></strong>
+
 This installation package also contains a set of scripts for 
 OpenStack mitaka and OpenDayLight (ODL) Beryllium integration.  
 If you want to run it, the scripts assume you already have OpenStack 
@@ -80,6 +109,8 @@ Make sure the ODL host is running and necessary ODL features
 are installed. Then, run
 
 <pre>
+$ cd $HOME
+$ cd openstack-mitaka-installer
 $ cd OPSInstaller/installer
 $ ./OSODL-ovs-00-...
 $ ./OSODL-ovs-01-...
