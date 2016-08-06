@@ -11,9 +11,10 @@ Thammasat University.
 You will perform all the installation on the controller node
 of your OpenStack deployment. 
 To use: 
-
+<pre>
 $ tar xvf openstack-mitaka-installer-0.x.x.tar
 $ cd openstack-mitaka-installer
+</pre>
 
 modify ./install-paramrc.sh file to set parameter
 values as you'd like. 
