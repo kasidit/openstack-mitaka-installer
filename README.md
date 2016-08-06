@@ -19,7 +19,7 @@ $ cd openstack-mitaka-installer
 In our example, we follow the example
 configuration parameters in the official installation manual of 
 openstack as illustrated in the picture below.<br> 
-<img src="document/architecture.png"> <br>
+<img src="documents/architecture.png"> <br>
 From the figure, we use the same configuration as those of OpenStack installation 
 manual for the managment network, data tunnel network, v-lan network, and external network.
 However, this script still require the followings. 
