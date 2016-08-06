@@ -106,7 +106,9 @@ with classic open vswitch network deployed.
 However, before the integration you have to delete all instances, 
 routers, and networks from your OpenStack deployment. 
 Make sure the ODL host is running and necessary ODL features 
-are installed. Then, run
+are installed. You may consult our <a href="http://sciencecloud-community.cs.tu.ac.th/?p=238">
+OpenStack and OpenDayLight integration blog post</a> for more details.  
+When ready, run the following commands. 
 
 <pre>
 $ cd $HOME
@@ -127,6 +129,7 @@ Note: This script is written for educational purpose.
 For more information, please consult the following 
 documents: 
 
-1. http://vasabilab.cs.tu.ac.th/ 
-2. http://docs.openstack.org/
+1. http://sciencecloud-community.cs.tu.ac.th/ 
+2. http://vasabilab.cs.tu.ac.th/ 
+3. http://docs.openstack.org/
  
