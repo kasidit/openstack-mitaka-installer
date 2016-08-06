@@ -628,7 +628,7 @@ OPSInstaller/controller/exe-stage07-SUDO-rabbit.sh:20:apt-get -y install rabbitm
 OPSInstaller/controller/exe-stage07-SUDO-rabbit.sh:21:
 OPSInstaller/controller/exe-stage07-SUDO-rabbit.sh:22:echo -n "* set rabbitmq password for guest...press"
 OPSInstaller/controller/exe-stage07-SUDO-rabbit.sh:23:#read varkey
-OPSInstaller/controller/exe-stage07-SUDO-rabbit.sh:24:rabbitmqctl add_user openstack vasabilabRABBIT_PASS
+OPSInstaller/controller/exe-stage07-SUDO-rabbit.sh:24:rabbitmqctl add_user openstack 9dbb160e939d2f9b0b27
 OPSInstaller/controller/exe-stage07-SUDO-rabbit.sh:25:rabbitmqctl set_permissions openstack ".*" ".*" ".*"
 OPSInstaller/controller/exe-stage07-SUDO-rabbit.sh:26:
 OPSInstaller/controller/exe-stage07-SUDO-rabbit.sh:27:printf "* install memcache..press"
@@ -654,8 +654,8 @@ OPSInstaller/controller/exe-stage08-USER-keystone-database.sh:14:echo -n "1. cre
 OPSInstaller/controller/exe-stage08-USER-keystone-database.sh:15:#read varkey
 OPSInstaller/controller/exe-stage08-USER-keystone-database.sh:16:#
 OPSInstaller/controller/exe-stage08-USER-keystone-database.sh:17:mysql -u root -pmysqlpassword -e "CREATE DATABASE keystone;"
-OPSInstaller/controller/exe-stage08-USER-keystone-database.sh:18:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'localhost' IDENTIFIED BY 'vasabilabKEYSTONE_DBPASS';"
-OPSInstaller/controller/exe-stage08-USER-keystone-database.sh:19:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'%' IDENTIFIED BY 'vasabilabKEYSTONE_DBPASS';"
+OPSInstaller/controller/exe-stage08-USER-keystone-database.sh:18:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'localhost' IDENTIFIED BY '74b4470838b9c2a21d98';"
+OPSInstaller/controller/exe-stage08-USER-keystone-database.sh:19:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'%' IDENTIFIED BY '74b4470838b9c2a21d98';"
 OPSInstaller/controller/exe-stage08-USER-keystone-database.sh:20:#
 OPSInstaller/controller/exe-stage09-SUDO-keystone.sh:1:# Openstack icehouse installation script on ubuntu 14.04 
 OPSInstaller/controller/exe-stage09-SUDO-keystone.sh:2:# by kasidit chanchio
@@ -698,7 +698,7 @@ OPSInstaller/controller/exe-stage10-USER-service-endpoints.sh:10:echo "Run this 
 OPSInstaller/controller/exe-stage10-USER-service-endpoints.sh:11:echo -n "* create Identity service and endpoint...press"
 OPSInstaller/controller/exe-stage10-USER-service-endpoints.sh:12:#read varkey
 OPSInstaller/controller/exe-stage10-USER-service-endpoints.sh:13:
-OPSInstaller/controller/exe-stage10-USER-service-endpoints.sh:14:export OS_TOKEN=vasabilabADMIN_TOKEN
+OPSInstaller/controller/exe-stage10-USER-service-endpoints.sh:14:export OS_TOKEN=e782d116e76a450e5dbd
 OPSInstaller/controller/exe-stage10-USER-service-endpoints.sh:15:export OS_URL=http://controller:35357/v3
 OPSInstaller/controller/exe-stage10-USER-service-endpoints.sh:16:export OS_IDENTITY_API_VERSION=3
 OPSInstaller/controller/exe-stage10-USER-service-endpoints.sh:17:
@@ -780,8 +780,8 @@ OPSInstaller/controller/exe-stage12-USER-glance-database.sh:10:echo "Run this sc
 OPSInstaller/controller/exe-stage12-USER-glance-database.sh:11:printf "\n1. create glance database tables...press"
 OPSInstaller/controller/exe-stage12-USER-glance-database.sh:12:#read varkey
 OPSInstaller/controller/exe-stage12-USER-glance-database.sh:13:mysql -u root -pmysqlpassword -e "CREATE DATABASE glance;"
-OPSInstaller/controller/exe-stage12-USER-glance-database.sh:14:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'localhost' IDENTIFIED BY 'vasabilabGLANCE_DBPASS';"
-OPSInstaller/controller/exe-stage12-USER-glance-database.sh:15:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'%' IDENTIFIED BY 'vasabilabGLANCE_DBPASS';"
+OPSInstaller/controller/exe-stage12-USER-glance-database.sh:14:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'localhost' IDENTIFIED BY '9f58d600ccbe2a7d05c5';"
+OPSInstaller/controller/exe-stage12-USER-glance-database.sh:15:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'%' IDENTIFIED BY '9f58d600ccbe2a7d05c5';"
 OPSInstaller/controller/exe-stage13-USER-glance-endpoints.sh:1:# Openstack icehouse installation script 
 OPSInstaller/controller/exe-stage13-USER-glance-endpoints.sh:2:# on ubuntu 14.04 by kasidit chanchio
 OPSInstaller/controller/exe-stage13-USER-glance-endpoints.sh:3:# vasabilab, dept of computer science, Thammasat University, Thailand
@@ -794,7 +794,7 @@ OPSInstaller/controller/exe-stage13-USER-glance-endpoints.sh:9:pwd
 OPSInstaller/controller/exe-stage13-USER-glance-endpoints.sh:10:echo "Run this script as a user."
 OPSInstaller/controller/exe-stage13-USER-glance-endpoints.sh:11:source ./admin-openrc.sh
 OPSInstaller/controller/exe-stage13-USER-glance-endpoints.sh:12:#
-OPSInstaller/controller/exe-stage13-USER-glance-endpoints.sh:13:openstack user create --domain default --password vasabilabGLANCE_PASS glance
+OPSInstaller/controller/exe-stage13-USER-glance-endpoints.sh:13:openstack user create --domain default --password b9c5dc3b4659af01217a glance
 OPSInstaller/controller/exe-stage13-USER-glance-endpoints.sh:14:#
 OPSInstaller/controller/exe-stage13-USER-glance-endpoints.sh:15:openstack role add --project service --user glance admin
 OPSInstaller/controller/exe-stage13-USER-glance-endpoints.sh:16:#
@@ -880,10 +880,10 @@ OPSInstaller/controller/exe-stage16-USER-nova-database.sh:12:#read varkey
 OPSInstaller/controller/exe-stage16-USER-nova-database.sh:13:
 OPSInstaller/controller/exe-stage16-USER-nova-database.sh:14:mysql -u root -pmysqlpassword -e "CREATE DATABASE nova_api;"
 OPSInstaller/controller/exe-stage16-USER-nova-database.sh:15:mysql -u root -pmysqlpassword -e "CREATE DATABASE nova;"
-OPSInstaller/controller/exe-stage16-USER-nova-database.sh:16:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON nova_api.* TO 'nova'@'localhost' IDENTIFIED BY 'vasabilabNOVA_DBPASS';"
-OPSInstaller/controller/exe-stage16-USER-nova-database.sh:17:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON nova_api.* TO 'nova'@'%' IDENTIFIED BY 'vasabilabNOVA_DBPASS';"
-OPSInstaller/controller/exe-stage16-USER-nova-database.sh:18:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'localhost' IDENTIFIED BY 'vasabilabNOVA_DBPASS';"
-OPSInstaller/controller/exe-stage16-USER-nova-database.sh:19:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'%' IDENTIFIED BY 'vasabilabNOVA_DBPASS';"
+OPSInstaller/controller/exe-stage16-USER-nova-database.sh:16:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON nova_api.* TO 'nova'@'localhost' IDENTIFIED BY '564085a52d2369e9ee51';"
+OPSInstaller/controller/exe-stage16-USER-nova-database.sh:17:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON nova_api.* TO 'nova'@'%' IDENTIFIED BY '564085a52d2369e9ee51';"
+OPSInstaller/controller/exe-stage16-USER-nova-database.sh:18:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'localhost' IDENTIFIED BY '564085a52d2369e9ee51';"
+OPSInstaller/controller/exe-stage16-USER-nova-database.sh:19:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'%' IDENTIFIED BY '564085a52d2369e9ee51';"
 OPSInstaller/controller/exe-stage17-USER-nova-endpoints.sh:1:# Openstack icehouse installation script 
 OPSInstaller/controller/exe-stage17-USER-nova-endpoints.sh:2:# on ubuntu 14.04 by kasidit chanchio
 OPSInstaller/controller/exe-stage17-USER-nova-endpoints.sh:3:# vasabilab, dept of computer science, Thammasat University, Thailand
@@ -899,7 +899,7 @@ OPSInstaller/controller/exe-stage17-USER-nova-endpoints.sh:12:#read varkey
 OPSInstaller/controller/exe-stage17-USER-nova-endpoints.sh:13:
 OPSInstaller/controller/exe-stage17-USER-nova-endpoints.sh:14:source ./admin-openrc.sh
 OPSInstaller/controller/exe-stage17-USER-nova-endpoints.sh:15:
-OPSInstaller/controller/exe-stage17-USER-nova-endpoints.sh:16:openstack user create --domain default --password vasabilabNOVA_PASS nova
+OPSInstaller/controller/exe-stage17-USER-nova-endpoints.sh:16:openstack user create --domain default --password 66220096289791889683 nova
 OPSInstaller/controller/exe-stage17-USER-nova-endpoints.sh:17:
 OPSInstaller/controller/exe-stage17-USER-nova-endpoints.sh:18:openstack role add --project service --user nova admin
 OPSInstaller/controller/exe-stage17-USER-nova-endpoints.sh:19:
@@ -968,8 +968,8 @@ OPSInstaller/controller/exe-stage21-USER-neutron-database.sh:11:printf "\n1. cre
 OPSInstaller/controller/exe-stage21-USER-neutron-database.sh:12:#read varkey
 OPSInstaller/controller/exe-stage21-USER-neutron-database.sh:13:
 OPSInstaller/controller/exe-stage21-USER-neutron-database.sh:14:mysql -u root -pmysqlpassword -e "CREATE DATABASE neutron;"
-OPSInstaller/controller/exe-stage21-USER-neutron-database.sh:15:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'localhost' IDENTIFIED BY 'vasabilabNEUTRON_DBPASS';"
-OPSInstaller/controller/exe-stage21-USER-neutron-database.sh:16:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'%' IDENTIFIED BY 'vasabilabNEUTRON_DBPASS';"
+OPSInstaller/controller/exe-stage21-USER-neutron-database.sh:15:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'localhost' IDENTIFIED BY '3bf41b17943a6e2c8ebf';"
+OPSInstaller/controller/exe-stage21-USER-neutron-database.sh:16:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'%' IDENTIFIED BY '3bf41b17943a6e2c8ebf';"
 OPSInstaller/controller/exe-stage22-USER-neutron-endpoints.sh:1:# Openstack icehouse installation script 
 OPSInstaller/controller/exe-stage22-USER-neutron-endpoints.sh:2:# on ubuntu 14.04 by kasidit chanchio
 OPSInstaller/controller/exe-stage22-USER-neutron-endpoints.sh:3:# vasabilab, dept of computer science, Thammasat University, Thailand
@@ -985,7 +985,7 @@ OPSInstaller/controller/exe-stage22-USER-neutron-endpoints.sh:12:printf "\n1. cr
 OPSInstaller/controller/exe-stage22-USER-neutron-endpoints.sh:13:#read varkey
 OPSInstaller/controller/exe-stage22-USER-neutron-endpoints.sh:14:source ./admin-openrc.sh
 OPSInstaller/controller/exe-stage22-USER-neutron-endpoints.sh:15:
-OPSInstaller/controller/exe-stage22-USER-neutron-endpoints.sh:16:openstack user create --domain default --password vasabilabNEUTRON_PASS neutron
+OPSInstaller/controller/exe-stage22-USER-neutron-endpoints.sh:16:openstack user create --domain default --password 535802fa588e5e098d4c neutron
 OPSInstaller/controller/exe-stage22-USER-neutron-endpoints.sh:17:
 OPSInstaller/controller/exe-stage22-USER-neutron-endpoints.sh:18:openstack role add --project service --user neutron admin
 OPSInstaller/controller/exe-stage22-USER-neutron-endpoints.sh:19:
@@ -1124,10 +1124,11 @@ OPSInstaller/controller/exe-stage31-USER-initial-network.sh:27:neutron router-cr
 OPSInstaller/controller/exe-stage31-USER-initial-network.sh:28:neutron router-interface-add demo-router demo-subnet
 OPSInstaller/controller/exe-stage31-USER-initial-network.sh:29:neutron router-gateway-set demo-router ext-net
 OPSInstaller/controller/exe-stage31-USER-initial-network.sh:30:
-OPSInstaller/controller/exe-stage31-USER-initial-network.sh:31:sleep 5
-OPSInstaller/controller/exe-stage31-USER-initial-network.sh:32:echo "verify connectivity"
-OPSInstaller/controller/exe-stage31-USER-initial-network.sh:33:#read varkey
-OPSInstaller/controller/exe-stage31-USER-initial-network.sh:34:ping -c 4 10.0.0.100
+OPSInstaller/controller/exe-stage31-USER-initial-network.sh:31:echo "wait 1 minute..."
+OPSInstaller/controller/exe-stage31-USER-initial-network.sh:32:sleep 60
+OPSInstaller/controller/exe-stage31-USER-initial-network.sh:33:echo "verify connectivity"
+OPSInstaller/controller/exe-stage31-USER-initial-network.sh:34:#read varkey
+OPSInstaller/controller/exe-stage31-USER-initial-network.sh:35:ping -c 4 10.0.0.100
 OPSInstaller/controller/exe-stage32-SUDO-horizon.sh:1:# Openstack icehouse installation script 
 OPSInstaller/controller/exe-stage32-SUDO-horizon.sh:2:# on ubuntu 14.04 by kasidit chanchio
 OPSInstaller/controller/exe-stage32-SUDO-horizon.sh:3:# vasabilab, dept of computer science, Thammasat University, Thailand
@@ -1240,8 +1241,8 @@ OPSInstaller/controller/exe-stage52-USER-odl-neutron-database.sh:12:#read varkey
 OPSInstaller/controller/exe-stage52-USER-odl-neutron-database.sh:13:
 OPSInstaller/controller/exe-stage52-USER-odl-neutron-database.sh:14:mysql -u root -pmysqlpassword -e "DROP DATABASE neutron;"
 OPSInstaller/controller/exe-stage52-USER-odl-neutron-database.sh:15:mysql -u root -pmysqlpassword -e "CREATE DATABASE neutron;"
-OPSInstaller/controller/exe-stage52-USER-odl-neutron-database.sh:16:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'localhost' IDENTIFIED BY 'vasabilabNEUTRON_DBPASS';"
-OPSInstaller/controller/exe-stage52-USER-odl-neutron-database.sh:17:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'%' IDENTIFIED BY 'vasabilabNEUTRON_DBPASS';"
+OPSInstaller/controller/exe-stage52-USER-odl-neutron-database.sh:16:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'localhost' IDENTIFIED BY '3bf41b17943a6e2c8ebf';"
+OPSInstaller/controller/exe-stage52-USER-odl-neutron-database.sh:17:mysql -u root -pmysqlpassword -e "GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'%' IDENTIFIED BY '3bf41b17943a6e2c8ebf';"
 OPSInstaller/controller/exe-stage53-SUDO-odl-neutron.sh:1:# Openstack icehouse installation script 
 OPSInstaller/controller/exe-stage53-SUDO-odl-neutron.sh:2:# on ubuntu 14.04 by kasidit chanchio
 OPSInstaller/controller/exe-stage53-SUDO-odl-neutron.sh:3:# vasabilab, dept of computer science, Thammasat University, Thailand
@@ -1258,7 +1259,6 @@ OPSInstaller/controller/exe-stage53-SUDO-odl-neutron.sh:13:  --config-file /etc/
 OPSInstaller/controller/exe-stage53-SUDO-odl-neutron.sh:14:#sleep 1
 OPSInstaller/controller/exe-stage53-SUDO-odl-neutron.sh:15:service neutron-server restart
 OPSInstaller/controller/exe-stage53-SUDO-odl-neutron.sh:16:#
-OPSInstaller/controller/exe-stage53-SUDO-odl-neutron.sh:17:echo "You may want to reboot controller network and computes."
 OPSInstaller/controller/exe-stage54-SUDO-odl-pip-install.sh:1:# Openstack icehouse installation script 
 OPSInstaller/controller/exe-stage54-SUDO-odl-pip-install.sh:2:# on ubuntu 14.04 by kasidit chanchio
 OPSInstaller/controller/exe-stage54-SUDO-odl-pip-install.sh:3:# vasabilab, dept of computer science, Thammasat University, Thailand
@@ -1336,24 +1336,6 @@ OPSInstaller/controller/exe-stageFIN-SUDO-postinstall.sh:13:pwd
 OPSInstaller/controller/exe-stageFIN-SUDO-postinstall.sh:14:cp files/sudoers.save /etc/sudoers
 OPSInstaller/installer/batch-installer-00-set-sudoer.sh:1:echo "adjust sudoer file"
 OPSInstaller/installer/batch-installer-00-set-sudoer.sh:2:sudo ./files/adjustsudoer.sh
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part1.sh:1:#!/bin/bash -x
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part1.sh:2:/bin/date
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part1.sh:3:./OS-installer-00-1-set-remote-access.sh
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part1.sh:4:./OS-installer-00-2-update-ubuntu.sh
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part1.sh:5:/bin/date
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part1.sh:6:printf "Continue Part 2"
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part2.sh:1:#!/bin/bash -x
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part2.sh:2:/bin/date
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part2.sh:3:./OS-installer-01-node-setups.sh
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part2.sh:4:./OS-installer-02-mysql.sh
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part2.sh:5:./OS-installer-03-rabbitmq.sh
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part2.sh:6:./OS-installer-04-keystone.sh
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part2.sh:7:./OS-installer-05-glance.sh
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part2.sh:8:./OS-installer-06-nova.sh
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part2.sh:9:./OS-installer-07-neutron.sh
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part2.sh:10:./OS-installer-08-horizon.sh
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part2.sh:11:/bin/date
-OPSInstaller/installer/batch-installer-classic-ovs-neutron-part2.sh:12:printf "Done"
 OPSInstaller/installer/batch-installer-dvr-neutron-part1.sh:1:#!/bin/bash -x
 OPSInstaller/installer/batch-installer-dvr-neutron-part1.sh:2:/bin/date
 OPSInstaller/installer/batch-installer-dvr-neutron-part1.sh:3:./OS-installer-00-1-set-remote-access.sh
@@ -1374,6 +1356,25 @@ OPSInstaller/installer/batch-installer-dvr-neutron-part2.sh:11:./OS-installer-09
 OPSInstaller/installer/batch-installer-dvr-neutron-part2.sh:12:./OS-installer-10-initial-user-network.sh
 OPSInstaller/installer/batch-installer-dvr-neutron-part2.sh:13:/bin/date
 OPSInstaller/installer/batch-installer-dvr-neutron-part2.sh:14:printf "Done"
+OPSInstaller/installer/batch-installer-ovs-neutron-part1.sh:1:#!/bin/bash -x
+OPSInstaller/installer/batch-installer-ovs-neutron-part1.sh:2:/bin/date
+OPSInstaller/installer/batch-installer-ovs-neutron-part1.sh:3:./OS-installer-00-1-set-remote-access.sh
+OPSInstaller/installer/batch-installer-ovs-neutron-part1.sh:4:./OS-installer-00-2-update-ubuntu.sh
+OPSInstaller/installer/batch-installer-ovs-neutron-part1.sh:5:/bin/date
+OPSInstaller/installer/batch-installer-ovs-neutron-part1.sh:6:printf "Continue Part 2"
+OPSInstaller/installer/batch-installer-ovs-neutron-part2.sh:1:#!/bin/bash -x
+OPSInstaller/installer/batch-installer-ovs-neutron-part2.sh:2:/bin/date
+OPSInstaller/installer/batch-installer-ovs-neutron-part2.sh:3:./OS-installer-01-node-setups.sh
+OPSInstaller/installer/batch-installer-ovs-neutron-part2.sh:4:./OS-installer-02-mysql.sh
+OPSInstaller/installer/batch-installer-ovs-neutron-part2.sh:5:./OS-installer-03-rabbitmq.sh
+OPSInstaller/installer/batch-installer-ovs-neutron-part2.sh:6:./OS-installer-04-keystone.sh
+OPSInstaller/installer/batch-installer-ovs-neutron-part2.sh:7:./OS-installer-05-glance.sh
+OPSInstaller/installer/batch-installer-ovs-neutron-part2.sh:8:./OS-installer-06-nova.sh
+OPSInstaller/installer/batch-installer-ovs-neutron-part2.sh:9:./OS-installer-07-neutron.sh
+OPSInstaller/installer/batch-installer-ovs-neutron-part2.sh:10:./OS-installer-08-horizon.sh
+OPSInstaller/installer/batch-installer-ovs-neutron-part2.sh:11:./OS-installer-10-initial-user-network.sh
+OPSInstaller/installer/batch-installer-ovs-neutron-part2.sh:12:/bin/date
+OPSInstaller/installer/batch-installer-ovs-neutron-part2.sh:13:printf "Done"
 OPSInstaller/installer/clearlog.sh:1:rm log/*
 OPSInstaller/installer/exe-preinstall00-SUDO-update.sh:1:# Openstack icehouse installation script on ubuntu 14.04 
 OPSInstaller/installer/exe-preinstall00-SUDO-update.sh:2:# by kasidit chanchio
@@ -1757,9 +1758,9 @@ OPSInstaller/installer/OS-installer-07-neutron.sh:26:sleep 5
 OPSInstaller/installer/OS-installer-07-neutron.sh:27:ssh -t openstack@compute1 sudo /bin/bash -x ./OPSInstaller/compute1/exe-stage29-SUDO-compute-neutron.sh | tee log/s29-compute.log
 OPSInstaller/installer/OS-installer-07-neutron.sh:28:sleep 5
 OPSInstaller/installer/OS-installer-07-neutron.sh:29:ssh -t openstack@controller /bin/bash -x ./OPSInstaller/controller/exe-stage30-USER-verify-neutron3.sh | tee log/s30-controller.log
-OPSInstaller/installer/OS-installer-07-neutron.sh:30:printf "\nCreate initial networks to test clasic neutron installation.\n If you want to use neutron with classic openvswitch,\npress any key, run ./OS-installer-08-horizon.sh and stop. Otherwise, press Ctrl C to skip.\n"
-OPSInstaller/installer/OS-installer-07-neutron.sh:31:read varkey
-OPSInstaller/installer/OS-installer-07-neutron.sh:32:ssh -t openstack@controller /bin/bash -x ./OPSInstaller/controller/exe-stage31-USER-initial-network.sh | tee log/s31-controller.log
+OPSInstaller/installer/OS-installer-07-neutron.sh:30:#printf "\nCreate initial networks to test clasic neutron installation.\n If you want to use neutron with classic openvswitch,\npress any key, run ./OS-installer-08-horizon.sh and stop. Otherwise, press Ctrl C to skip.\n"
+OPSInstaller/installer/OS-installer-07-neutron.sh:31:#read varkey
+OPSInstaller/installer/OS-installer-07-neutron.sh:32:#ssh -t openstack@controller /bin/bash -x ./OPSInstaller/controller/exe-stage31-USER-initial-network.sh | tee log/s31-controller.log
 OPSInstaller/installer/OS-installer-07-neutron.sh:33:printf "\nnext run ./OS-installer-08-horizon.sh\n"
 OPSInstaller/installer/OS-installer-08-horizon.sh:1:# Openstack kilo installation script on ubuntu 14.04 
 OPSInstaller/installer/OS-installer-08-horizon.sh:2:# by kasidit chanchio
@@ -1807,180 +1808,177 @@ OPSInstaller/installer/OS-installer-10-initial-user-network.sh:9:#
 OPSInstaller/installer/OS-installer-10-initial-user-network.sh:10:# initial user network
 OPSInstaller/installer/OS-installer-10-initial-user-network.sh:11:ssh -t openstack@controller /bin/bash -x ./OPSInstaller/controller/exe-stage31-USER-initial-network.sh | tee log/s31-controller.log
 OPSInstaller/installer/OS-installer-10-initial-user-network.sh:12:printf "\nThat's it for now.\n"
-OPSInstaller/installer/OSODL-installer-00-force-set-controller-time.sh:1:#!/bin/bash
-OPSInstaller/installer/OSODL-installer-00-force-set-controller-time.sh:2:echo "set timezone of controller network compute"
-OPSInstaller/installer/OSODL-installer-00-force-set-controller-time.sh:3:ssh -t openstack@controller sudo timedatectl set-timezone Asia/Bangkok
-OPSInstaller/installer/OSODL-installer-00-force-set-controller-time.sh:4:ssh -t openstack@network sudo timedatectl set-timezone Asia/Bangkok
-OPSInstaller/installer/OSODL-installer-00-force-set-controller-time.sh:5:ssh -t openstack@compute sudo timedatectl set-timezone Asia/Bangkok
-OPSInstaller/installer/OSODL-installer-00-force-set-controller-time.sh:6:ssh -t openstack@compute1 sudo timedatectl set-timezone Asia/Bangkok
-OPSInstaller/installer/OSODL-installer-00-force-set-controller-time.sh:7:
-OPSInstaller/installer/OSODL-installer-00-force-set-controller-time.sh:8:echo "set date of controller network compute"
-OPSInstaller/installer/OSODL-installer-00-force-set-controller-time.sh:9:ssh -t openstack@controller sudo date --set=\"$(date)\"
-OPSInstaller/installer/OSODL-installer-00-force-set-controller-time.sh:10:ssh -t openstack@network sudo date --set=\"$(date)\"
-OPSInstaller/installer/OSODL-installer-00-force-set-controller-time.sh:11:ssh -t openstack@compute sudo date --set=\"$(date)\"
-OPSInstaller/installer/OSODL-installer-00-force-set-controller-time.sh:12:ssh -t openstack@compute1 sudo date --set=\"$(date)\"
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:1:#!/bin/bash -x 
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:2:#
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:3:# Openstack icehouse installation script on ubuntu 14.04 
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:4:# by kasidit chanchio
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:5:# vasabilab, dept of computer science, 
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:6:# Thammasat University, Thailand
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:7:#
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:8:# Copyright 2014  Kasidit Chanchio
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:9:#
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:10:#
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:11:# run below before launch this script
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:12:#printf "\nyou are supposed to be running ssh-agent at this point.\n"
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:13:# --->ssh-agent /bin/bash
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:14:# --> ssh-add
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:15:# copy Installer 
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:16:
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:17:pwd
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:18:#ssh -t openstack@network sudo timedatectl set-timezone Asia/Bangkok
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:19:# time zone should be one of vasabi parametert
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:20:#ssh -t openstack@network sudo date --set=\"$(date)\"
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:21:
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:22:echo "copy installer to nodes.. press"
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:23:#read varkey
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:24:scp OPSInstaller.tar openstack@controller:/home/openstack/OPSInstaller.tar
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:25:scp OPSInstaller.tar openstack@network:/home/openstack/OPSInstaller.tar
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:26:scp OPSInstaller.tar openstack@compute:/home/openstack/OPSInstaller.tar
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:27:scp OPSInstaller.tar openstack@compute1:/home/openstack/OPSInstaller.tar
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:28:#
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:29:echo "remove existing OPSInstaller on controller node"
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:30:#read varkey
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:31:ssh openstack@controller rm -rf /home/openstack/OPSInstaller | tee log/extract-controller-current.log
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:32:echo "remove existing OPSInstaller on network node"
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:33:#read varkey
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:34:ssh openstack@network rm -rf /home/openstack/OPSInstaller | tee log/extract-network-current.log
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:35:echo "remove existing OPSInstaller on compute node"
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:36:#read varkey
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:37:ssh openstack@compute rm -rf /home/openstack/OPSInstaller | tee log/extract-compute-current.log
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:38:echo "remove existing OPSInstaller on compute1 node"
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:39:#read varkey
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:40:ssh openstack@compute1 rm -rf /home/openstack/OPSInstaller | tee log/extract-compute-current.log
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:41:#
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:42:
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:43:echo "extract installer files on controller.. press"
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:44:#read varkey
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:45:ssh openstack@controller tar xvf /home/openstack/OPSInstaller.tar | tee log/extract-controller-current.log
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:46:ssh openstack@controller /home/openstack/OPSInstaller/remove-all-except-controller.sh 
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:47:echo "extract installer files on network node.. press"
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:48:#read varkey
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:49:ssh openstack@network tar xvf /home/openstack/OPSInstaller.tar | tee log/extract-network-current.log
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:50:ssh openstack@network /home/openstack/OPSInstaller/remove-all-except-network.sh 
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:51:echo "extract installer files on compute node.. press"
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:52:#read varkey
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:53:ssh openstack@compute tar xvf /home/openstack/OPSInstaller.tar | tee log/extract-compute-current.log
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:54:ssh openstack@compute /home/openstack/OPSInstaller/remove-all-except-compute.sh
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:55:echo "extract installer files on compute1 node.. press"
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:56:#read varkey
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:57:ssh openstack@compute1 tar xvf /home/openstack/OPSInstaller.tar | tee log/extract-compute-current.log
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:58:ssh openstack@compute1 /home/openstack/OPSInstaller/remove-all-except-compute1.sh 
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:59:#
-OPSInstaller/installer/OSODL-installer-01-force-redo-set-openstack-nodes.sh:60:
-OPSInstaller/installer/OSODL-installer-02-stop-neutron.sh:1:# Openstack kilo installation script on ubuntu 14.04 
-OPSInstaller/installer/OSODL-installer-02-stop-neutron.sh:2:# by kasidit chanchio
-OPSInstaller/installer/OSODL-installer-02-stop-neutron.sh:3:# vasabilab, dept of computer science, 
-OPSInstaller/installer/OSODL-installer-02-stop-neutron.sh:4:# Thammasat University, Thailand
-OPSInstaller/installer/OSODL-installer-02-stop-neutron.sh:5:#
-OPSInstaller/installer/OSODL-installer-02-stop-neutron.sh:6:# Copyright 2015  Kasidit Chanchio
-OPSInstaller/installer/OSODL-installer-02-stop-neutron.sh:7:#
-OPSInstaller/installer/OSODL-installer-02-stop-neutron.sh:8:#!/bin/bash -x
-OPSInstaller/installer/OSODL-installer-02-stop-neutron.sh:9:#
-OPSInstaller/installer/OSODL-installer-02-stop-neutron.sh:10:# neutron
-OPSInstaller/installer/OSODL-installer-02-stop-neutron.sh:11:ssh -t openstack@controller sudo /bin/bash -x ./OPSInstaller/controller/exe-stage38-USER-odl-verify-controller.sh | tee log/s38-controller.log
-OPSInstaller/installer/OSODL-installer-02-stop-neutron.sh:12:ssh -t openstack@controller sudo /bin/bash -x ./OPSInstaller/controller/exe-stage39-SUDO-odl-stop-neutron.sh | tee log/s39-controller.log
-OPSInstaller/installer/OSODL-installer-02-stop-neutron.sh:13:printf "\nnext run ./ODLOS-installer-01-...\n"
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:1:# Openstack kilo installation script on ubuntu 14.04 
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:2:# by kasidit chanchio
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:3:# vasabilab, dept of computer science, 
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:4:# Thammasat University, Thailand
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:5:#
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:6:# Copyright 2015  Kasidit Chanchio
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:7:#
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:8:#!/bin/bash -x
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:9:#
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:10:# neutron
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:11:#sleep 5
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:12:ssh -t openstack@network sudo /bin/bash -x ./OPSInstaller/network/exe-stage40-SUDO-odl-purge-neutron-ovs-plugin-network.sh | tee log/s40-network.log
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:13:#sleep 5
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:14:ssh -t openstack@compute sudo /bin/bash -x ./OPSInstaller/compute/exe-stage41-SUDO-odl-purge-neutron-ovs-plugin-compute.sh | tee log/s41-compute.log
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:15:#sleep 5
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:16:ssh -t openstack@compute1 sudo /bin/bash -x ./OPSInstaller/compute1/exe-stage42-SUDO-odl-purge-neutron-ovs-plugin-compute1.sh | tee log/s42-compute1.log
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:17:#sleep 10
-OPSInstaller/installer/OSODL-installer-03-purge-neutron-agent.sh:18:printf "\nnext run ./OSODL-installer-02-...\n"
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:1:# Openstack kilo installation script on ubuntu 14.04 
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:2:# by kasidit chanchio
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:3:# vasabilab, dept of computer science, 
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:4:# Thammasat University, Thailand
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:5:#
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:6:# Copyright 2015  Kasidit Chanchio
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:7:#
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:8:#!/bin/bash -x
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:9:#
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:10:# neutron
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:11:#sleep 5
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:12:ssh -t openstack@network sudo /bin/bash -x ./OPSInstaller/network/exe-stage43-SUDO-odl-set-ovs-manager-network.sh | tee log/s43-network.log
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:13:#sleep 5
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:14:ssh -t openstack@compute sudo /bin/bash -x ./OPSInstaller/compute/exe-stage44-SUDO-odl-set-ovs-manager-compute.sh | tee log/s44-compute.log
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:15:#sleep 5
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:16:ssh -t openstack@compute1 sudo /bin/bash -x ./OPSInstaller/compute1/exe-stage45-SUDO-odl-set-ovs-manager-compute1.sh | tee log/s45-compute1.log
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:17:#sleep 10
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:18:ssh -t openstack@network sudo /bin/bash -x ./OPSInstaller/network/exe-stage46-SUDO-set-ext-network.sh | tee log/s46-network.log
-OPSInstaller/installer/OSODL-installer-04-set-ovs-manager.sh:19:printf "\nnext run ./OSODL-installer-03-...\n"
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:1:# Openstack kilo installation script on ubuntu 14.04 
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:2:# by kasidit chanchio
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:3:# vasabilab, dept of computer science, 
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:4:# Thammasat University, Thailand
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:5:#
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:6:# Copyright 2015  Kasidit Chanchio
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:7:#
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:8:#!/bin/bash -x
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:9:#
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:10:# neutron
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:11:ssh -t openstack@controller sudo /bin/bash -x ./OPSInstaller/controller/exe-stage47-SUDO-odl-copy-ml2-controller.sh | tee log/s47-controller.log
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:12:sleep 15
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:13:ssh -t openstack@network sudo /bin/bash -x ./OPSInstaller/network/exe-stage48-SUDO-odl-copy-ml2-network.sh | tee log/s48-network.log
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:14:sleep 15
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:15:ssh -t openstack@compute sudo /bin/bash -x ./OPSInstaller/compute/exe-stage49-SUDO-odl-copy-ml2-compute.sh | tee log/s49-compute.log
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:16:sleep 15
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:17:ssh -t openstack@compute1 sudo /bin/bash -x ./OPSInstaller/compute1/exe-stage50-SUDO-odl-copy-ml2-compute1.sh | tee log/s50-compute1.log
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:18:sleep 15
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:19:ssh -t openstack@network sudo /bin/bash -x ./OPSInstaller/network/exe-stage51-SUDO-odl-set-l3-network.sh | tee log/s51-network.log
-OPSInstaller/installer/OSODL-installer-05-copy-ml2.sh:20:printf "\nnext run ./OSODL-installer-04-...\n"
-OPSInstaller/installer/OSODL-installer-06-set-neutron.sh:1:# Openstack kilo installation script on ubuntu 14.04 
-OPSInstaller/installer/OSODL-installer-06-set-neutron.sh:2:# by kasidit chanchio
-OPSInstaller/installer/OSODL-installer-06-set-neutron.sh:3:# vasabilab, dept of computer science, 
-OPSInstaller/installer/OSODL-installer-06-set-neutron.sh:4:# Thammasat University, Thailand
-OPSInstaller/installer/OSODL-installer-06-set-neutron.sh:5:#
-OPSInstaller/installer/OSODL-installer-06-set-neutron.sh:6:# Copyright 2015  Kasidit Chanchio
-OPSInstaller/installer/OSODL-installer-06-set-neutron.sh:7:#
-OPSInstaller/installer/OSODL-installer-06-set-neutron.sh:8:#!/bin/bash -x
-OPSInstaller/installer/OSODL-installer-06-set-neutron.sh:9:#
-OPSInstaller/installer/OSODL-installer-06-set-neutron.sh:10:# neutron
-OPSInstaller/installer/OSODL-installer-06-set-neutron.sh:11:ssh -t openstack@controller /bin/bash -x ./OPSInstaller/controller/exe-stage52-USER-odl-neutron-database.sh | tee log/s52-controller.log
-OPSInstaller/installer/OSODL-installer-06-set-neutron.sh:12:sleep 5
-OPSInstaller/installer/OSODL-installer-06-set-neutron.sh:13:ssh -t openstack@controller sudo /bin/bash -x ./OPSInstaller/controller/exe-stage53-SUDO-odl-neutron.sh | tee log/s53-controller.log
-OPSInstaller/installer/OSODL-installer-06-set-neutron.sh:14:sleep 5
-OPSInstaller/installer/OSODL-installer-06-set-neutron.sh:15:#
-OPSInstaller/installer/OSODL-installer-06-set-neutron.sh:16:printf "\nnext run ./OSODL-installer-05-...\n"
-OPSInstaller/installer/OSODL-installer-07-pip-init-network.sh:1:# Openstack kilo installation script on ubuntu 14.04 
-OPSInstaller/installer/OSODL-installer-07-pip-init-network.sh:2:# by kasidit chanchio
-OPSInstaller/installer/OSODL-installer-07-pip-init-network.sh:3:# vasabilab, dept of computer science, 
-OPSInstaller/installer/OSODL-installer-07-pip-init-network.sh:4:# Thammasat University, Thailand
-OPSInstaller/installer/OSODL-installer-07-pip-init-network.sh:5:#
-OPSInstaller/installer/OSODL-installer-07-pip-init-network.sh:6:# Copyright 2015  Kasidit Chanchio
-OPSInstaller/installer/OSODL-installer-07-pip-init-network.sh:7:#
-OPSInstaller/installer/OSODL-installer-07-pip-init-network.sh:8:#!/bin/bash -x
-OPSInstaller/installer/OSODL-installer-07-pip-init-network.sh:9:#
-OPSInstaller/installer/OSODL-installer-07-pip-init-network.sh:10:# neutron
-OPSInstaller/installer/OSODL-installer-07-pip-init-network.sh:11:ssh -t openstack@controller sudo /bin/bash -x ./OPSInstaller/controller/exe-stage54-SUDO-odl-pip-install.sh | tee log/s54-controller.log
-OPSInstaller/installer/OSODL-installer-07-pip-init-network.sh:12:sleep 5
-OPSInstaller/installer/OSODL-installer-07-pip-init-network.sh:13:ssh -t openstack@network sudo /bin/bash -x ./OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh | tee log/s54-controller.log
-OPSInstaller/installer/OSODL-installer-07-pip-init-network.sh:14:ssh -t openstack@controller /bin/bash -x ./OPSInstaller/controller/exe-stage55-USER-odl-initial-network.sh | tee log/s55-controller.log
-OPSInstaller/installer/OSODL-installer-07-pip-init-network.sh:15:#
-OPSInstaller/installer/OSODL-installer-07-pip-init-network.sh:16:printf "\nThat's it for now.\n"
+OPSInstaller/installer/OSODL-ovs-00-force-set-controller-time.sh:1:#!/bin/bash
+OPSInstaller/installer/OSODL-ovs-00-force-set-controller-time.sh:2:echo "set timezone of controller network compute"
+OPSInstaller/installer/OSODL-ovs-00-force-set-controller-time.sh:3:ssh -t openstack@controller sudo timedatectl set-timezone Asia/Bangkok
+OPSInstaller/installer/OSODL-ovs-00-force-set-controller-time.sh:4:ssh -t openstack@network sudo timedatectl set-timezone Asia/Bangkok
+OPSInstaller/installer/OSODL-ovs-00-force-set-controller-time.sh:5:ssh -t openstack@compute sudo timedatectl set-timezone Asia/Bangkok
+OPSInstaller/installer/OSODL-ovs-00-force-set-controller-time.sh:6:ssh -t openstack@compute1 sudo timedatectl set-timezone Asia/Bangkok
+OPSInstaller/installer/OSODL-ovs-00-force-set-controller-time.sh:7:
+OPSInstaller/installer/OSODL-ovs-00-force-set-controller-time.sh:8:echo "set date of controller network compute"
+OPSInstaller/installer/OSODL-ovs-00-force-set-controller-time.sh:9:ssh -t openstack@controller sudo date --set=\"$(date)\"
+OPSInstaller/installer/OSODL-ovs-00-force-set-controller-time.sh:10:ssh -t openstack@network sudo date --set=\"$(date)\"
+OPSInstaller/installer/OSODL-ovs-00-force-set-controller-time.sh:11:ssh -t openstack@compute sudo date --set=\"$(date)\"
+OPSInstaller/installer/OSODL-ovs-00-force-set-controller-time.sh:12:ssh -t openstack@compute1 sudo date --set=\"$(date)\"
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:1:#!/bin/bash -x 
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:2:#
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:3:# Openstack icehouse installation script on ubuntu 14.04 
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:4:# by kasidit chanchio
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:5:# vasabilab, dept of computer science, 
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:6:# Thammasat University, Thailand
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:7:#
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:8:# Copyright 2014  Kasidit Chanchio
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:9:#
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:10:#
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:11:# run below before launch this script
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:12:#printf "\nyou are supposed to be running ssh-agent at this point.\n"
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:13:# --->ssh-agent /bin/bash
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:14:# --> ssh-add
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:15:# copy Installer 
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:16:
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:17:pwd
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:18:#ssh -t openstack@network sudo timedatectl set-timezone Asia/Bangkok
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:19:# time zone should be one of vasabi parametert
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:20:#ssh -t openstack@network sudo date --set=\"$(date)\"
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:21:
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:22:echo "copy installer to nodes.. press"
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:23:#read varkey
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:24:scp OPSInstaller.tar openstack@controller:/home/openstack/OPSInstaller.tar
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:25:scp OPSInstaller.tar openstack@network:/home/openstack/OPSInstaller.tar
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:26:scp OPSInstaller.tar openstack@compute:/home/openstack/OPSInstaller.tar
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:27:scp OPSInstaller.tar openstack@compute1:/home/openstack/OPSInstaller.tar
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:28:#
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:29:echo "remove existing OPSInstaller on controller node"
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:30:#read varkey
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:31:ssh openstack@controller rm -rf /home/openstack/OPSInstaller | tee log/extract-controller-current.log
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:32:echo "remove existing OPSInstaller on network node"
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:33:#read varkey
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:34:ssh openstack@network rm -rf /home/openstack/OPSInstaller | tee log/extract-network-current.log
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:35:echo "remove existing OPSInstaller on compute node"
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:36:#read varkey
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:37:ssh openstack@compute rm -rf /home/openstack/OPSInstaller | tee log/extract-compute-current.log
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:38:echo "remove existing OPSInstaller on compute1 node"
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:39:#read varkey
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:40:ssh openstack@compute1 rm -rf /home/openstack/OPSInstaller | tee log/extract-compute-current.log
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:41:#
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:42:
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:43:echo "extract installer files on controller.. press"
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:44:#read varkey
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:45:ssh openstack@controller tar xvf /home/openstack/OPSInstaller.tar | tee log/extract-controller-current.log
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:46:ssh openstack@controller /home/openstack/OPSInstaller/remove-all-except-controller.sh 
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:47:echo "extract installer files on network node.. press"
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:48:#read varkey
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:49:ssh openstack@network tar xvf /home/openstack/OPSInstaller.tar | tee log/extract-network-current.log
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:50:ssh openstack@network /home/openstack/OPSInstaller/remove-all-except-network.sh 
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:51:echo "extract installer files on compute node.. press"
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:52:#read varkey
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:53:ssh openstack@compute tar xvf /home/openstack/OPSInstaller.tar | tee log/extract-compute-current.log
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:54:ssh openstack@compute /home/openstack/OPSInstaller/remove-all-except-compute.sh
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:55:echo "extract installer files on compute1 node.. press"
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:56:#read varkey
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:57:ssh openstack@compute1 tar xvf /home/openstack/OPSInstaller.tar | tee log/extract-compute-current.log
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:58:ssh openstack@compute1 /home/openstack/OPSInstaller/remove-all-except-compute1.sh 
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:59:#
+OPSInstaller/installer/OSODL-ovs-01-force-redo-set-openstack-nodes.sh:60:
+OPSInstaller/installer/OSODL-ovs-02-stop-neutron.sh:1:# Openstack kilo installation script on ubuntu 14.04 
+OPSInstaller/installer/OSODL-ovs-02-stop-neutron.sh:2:# by kasidit chanchio
+OPSInstaller/installer/OSODL-ovs-02-stop-neutron.sh:3:# vasabilab, dept of computer science, 
+OPSInstaller/installer/OSODL-ovs-02-stop-neutron.sh:4:# Thammasat University, Thailand
+OPSInstaller/installer/OSODL-ovs-02-stop-neutron.sh:5:#
+OPSInstaller/installer/OSODL-ovs-02-stop-neutron.sh:6:# Copyright 2015  Kasidit Chanchio
+OPSInstaller/installer/OSODL-ovs-02-stop-neutron.sh:7:#
+OPSInstaller/installer/OSODL-ovs-02-stop-neutron.sh:8:#!/bin/bash -x
+OPSInstaller/installer/OSODL-ovs-02-stop-neutron.sh:9:#
+OPSInstaller/installer/OSODL-ovs-02-stop-neutron.sh:10:# neutron
+OPSInstaller/installer/OSODL-ovs-02-stop-neutron.sh:11:ssh -t openstack@controller sudo /bin/bash -x ./OPSInstaller/controller/exe-stage38-USER-odl-verify-controller.sh | tee log/s38-controller.log
+OPSInstaller/installer/OSODL-ovs-02-stop-neutron.sh:12:ssh -t openstack@controller sudo /bin/bash -x ./OPSInstaller/controller/exe-stage39-SUDO-odl-stop-neutron.sh | tee log/s39-controller.log
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:1:# Openstack kilo installation script on ubuntu 14.04 
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:2:# by kasidit chanchio
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:3:# vasabilab, dept of computer science, 
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:4:# Thammasat University, Thailand
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:5:#
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:6:# Copyright 2015  Kasidit Chanchio
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:7:#
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:8:#!/bin/bash -x
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:9:#
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:10:# neutron
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:11:#sleep 5
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:12:ssh -t openstack@network sudo /bin/bash -x ./OPSInstaller/network/exe-stage40-SUDO-odl-purge-neutron-ovs-plugin-network.sh | tee log/s40-network.log
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:13:#sleep 5
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:14:ssh -t openstack@compute sudo /bin/bash -x ./OPSInstaller/compute/exe-stage41-SUDO-odl-purge-neutron-ovs-plugin-compute.sh | tee log/s41-compute.log
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:15:#sleep 5
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:16:ssh -t openstack@compute1 sudo /bin/bash -x ./OPSInstaller/compute1/exe-stage42-SUDO-odl-purge-neutron-ovs-plugin-compute1.sh | tee log/s42-compute1.log
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:17:#sleep 10
+OPSInstaller/installer/OSODL-ovs-03-purge-neutron-agent.sh:18:#printf "\nnext run ./OSODL-installer-02-...\n"
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:1:# Openstack kilo installation script on ubuntu 14.04 
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:2:# by kasidit chanchio
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:3:# vasabilab, dept of computer science, 
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:4:# Thammasat University, Thailand
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:5:#
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:6:# Copyright 2015  Kasidit Chanchio
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:7:#
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:8:#!/bin/bash -x
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:9:#
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:10:# neutron
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:11:#sleep 5
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:12:ssh -t openstack@network sudo /bin/bash -x ./OPSInstaller/network/exe-stage43-SUDO-odl-set-ovs-manager-network.sh | tee log/s43-network.log
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:13:#sleep 5
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:14:ssh -t openstack@compute sudo /bin/bash -x ./OPSInstaller/compute/exe-stage44-SUDO-odl-set-ovs-manager-compute.sh | tee log/s44-compute.log
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:15:#sleep 5
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:16:ssh -t openstack@compute1 sudo /bin/bash -x ./OPSInstaller/compute1/exe-stage45-SUDO-odl-set-ovs-manager-compute1.sh | tee log/s45-compute1.log
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:17:#sleep 10
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:18:ssh -t openstack@network sudo /bin/bash -x ./OPSInstaller/network/exe-stage46-SUDO-set-ext-network.sh | tee log/s46-network.log
+OPSInstaller/installer/OSODL-ovs-04-set-ovs-manager.sh:19:#printf "\nnext run ./OSODL-installer-03-...\n"
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:1:# Openstack kilo installation script on ubuntu 14.04 
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:2:# by kasidit chanchio
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:3:# vasabilab, dept of computer science, 
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:4:# Thammasat University, Thailand
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:5:#
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:6:# Copyright 2015  Kasidit Chanchio
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:7:#
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:8:#!/bin/bash -x
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:9:#
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:10:# neutron
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:11:ssh -t openstack@controller sudo /bin/bash -x ./OPSInstaller/controller/exe-stage47-SUDO-odl-copy-ml2-controller.sh | tee log/s47-controller.log
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:12:sleep 15
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:13:ssh -t openstack@network sudo /bin/bash -x ./OPSInstaller/network/exe-stage48-SUDO-odl-copy-ml2-network.sh | tee log/s48-network.log
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:14:sleep 15
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:15:ssh -t openstack@compute sudo /bin/bash -x ./OPSInstaller/compute/exe-stage49-SUDO-odl-copy-ml2-compute.sh | tee log/s49-compute.log
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:16:sleep 15
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:17:ssh -t openstack@compute1 sudo /bin/bash -x ./OPSInstaller/compute1/exe-stage50-SUDO-odl-copy-ml2-compute1.sh | tee log/s50-compute1.log
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:18:sleep 15
+OPSInstaller/installer/OSODL-ovs-05-copy-ml2.sh:19:ssh -t openstack@network sudo /bin/bash -x ./OPSInstaller/network/exe-stage51-SUDO-odl-set-l3-network.sh | tee log/s51-network.log
+OPSInstaller/installer/OSODL-ovs-06-set-neutron.sh:1:# Openstack kilo installation script on ubuntu 14.04 
+OPSInstaller/installer/OSODL-ovs-06-set-neutron.sh:2:# by kasidit chanchio
+OPSInstaller/installer/OSODL-ovs-06-set-neutron.sh:3:# vasabilab, dept of computer science, 
+OPSInstaller/installer/OSODL-ovs-06-set-neutron.sh:4:# Thammasat University, Thailand
+OPSInstaller/installer/OSODL-ovs-06-set-neutron.sh:5:#
+OPSInstaller/installer/OSODL-ovs-06-set-neutron.sh:6:# Copyright 2015  Kasidit Chanchio
+OPSInstaller/installer/OSODL-ovs-06-set-neutron.sh:7:#
+OPSInstaller/installer/OSODL-ovs-06-set-neutron.sh:8:#!/bin/bash -x
+OPSInstaller/installer/OSODL-ovs-06-set-neutron.sh:9:#
+OPSInstaller/installer/OSODL-ovs-06-set-neutron.sh:10:# neutron
+OPSInstaller/installer/OSODL-ovs-06-set-neutron.sh:11:ssh -t openstack@controller /bin/bash -x ./OPSInstaller/controller/exe-stage52-USER-odl-neutron-database.sh | tee log/s52-controller.log
+OPSInstaller/installer/OSODL-ovs-06-set-neutron.sh:12:sleep 5
+OPSInstaller/installer/OSODL-ovs-06-set-neutron.sh:13:ssh -t openstack@controller sudo /bin/bash -x ./OPSInstaller/controller/exe-stage53-SUDO-odl-neutron.sh | tee log/s53-controller.log
+OPSInstaller/installer/OSODL-ovs-06-set-neutron.sh:14:sleep 5
+OPSInstaller/installer/OSODL-ovs-06-set-neutron.sh:15:#
+OPSInstaller/installer/OSODL-ovs-07-pip-init-network.sh:1:# Openstack kilo installation script on ubuntu 14.04 
+OPSInstaller/installer/OSODL-ovs-07-pip-init-network.sh:2:# by kasidit chanchio
+OPSInstaller/installer/OSODL-ovs-07-pip-init-network.sh:3:# vasabilab, dept of computer science, 
+OPSInstaller/installer/OSODL-ovs-07-pip-init-network.sh:4:# Thammasat University, Thailand
+OPSInstaller/installer/OSODL-ovs-07-pip-init-network.sh:5:#
+OPSInstaller/installer/OSODL-ovs-07-pip-init-network.sh:6:# Copyright 2015  Kasidit Chanchio
+OPSInstaller/installer/OSODL-ovs-07-pip-init-network.sh:7:#
+OPSInstaller/installer/OSODL-ovs-07-pip-init-network.sh:8:#!/bin/bash -x
+OPSInstaller/installer/OSODL-ovs-07-pip-init-network.sh:9:#
+OPSInstaller/installer/OSODL-ovs-07-pip-init-network.sh:10:# neutron
+OPSInstaller/installer/OSODL-ovs-07-pip-init-network.sh:11:ssh -t openstack@controller sudo /bin/bash -x ./OPSInstaller/controller/exe-stage54-SUDO-odl-pip-install.sh | tee log/s54-controller.log
+OPSInstaller/installer/OSODL-ovs-07-pip-init-network.sh:12:sleep 5
+OPSInstaller/installer/OSODL-ovs-07-pip-init-network.sh:13:ssh -t openstack@network sudo /bin/bash -x ./OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh | tee log/s54-controller.log
+OPSInstaller/installer/OSODL-ovs-07-pip-init-network.sh:14:ssh -t openstack@controller /bin/bash -x ./OPSInstaller/controller/exe-stage55-USER-odl-initial-network.sh | tee log/s55-controller.log
+OPSInstaller/installer/OSODL-ovs-07-pip-init-network.sh:15:#
+OPSInstaller/installer/OSODL-ovs-07-pip-init-network.sh:16:printf "\nThat's it for now.\n"
 OPSInstaller/network/clearlog.sh:1:rm log/*
 OPSInstaller/network/exe-stage00-SUDO-update.sh:1:# Openstack icehouse installation script on ubuntu 14.04 
 OPSInstaller/network/exe-stage00-SUDO-update.sh:2:# by kasidit chanchio
@@ -2254,13 +2252,12 @@ OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh:8:cd $HOME/OPSIns
 OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh:9:pwd
 OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh:10:echo "Run this script with sudo or as root."
 OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh:11:#read varkey
-OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh:12:printf "restart neutron agents.. press\n"
-OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh:13:#read varkey
-OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh:14:service openvswitch-switch restart
-OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh:15:#service neutron-openvswitch-agent restart
-OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh:16:service neutron-l3-agent restart
-OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh:17:service neutron-dhcp-agent restart
-OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh:18:service neutron-metadata-agent restart
+OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh:12:#read varkey
+OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh:13:service openvswitch-switch restart
+OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh:14:#service neutron-openvswitch-agent restart
+OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh:15:service neutron-l3-agent restart
+OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh:16:service neutron-dhcp-agent restart
+OPSInstaller/network/exe-stage54p2-SUDO-odl-restart-network.sh:17:service neutron-metadata-agent restart
 OPSInstaller/network/exe-stageFIN-SUDO-postinstall.sh:1:# Openstack icehouse installation script on ubuntu 14.04 
 OPSInstaller/network/exe-stageFIN-SUDO-postinstall.sh:2:# by kasidit chanchio
 OPSInstaller/network/exe-stageFIN-SUDO-postinstall.sh:3:# vasabilab, dept of computer science, 
