@@ -3,13 +3,14 @@ The "OPSInstaller" OpenStack Mitaka Installation Script
 
 Copyright 2016 Kasidit Chanchio, Vasinee Siripoon, Somkiat Kosolsombat 
 
-Contact: kasiditchanchio@gmail.com
-department of computer science
-faculty of science and technology
+Contact: kasiditchanchio@gmail.com <br>
+department of computer science <br>
+faculty of science and technology <br>
 Thammasat University.
 
-You will perform all the installation on the controller node
+You will issue every instruction on the controller node
 of your OpenStack deployment. 
+
 To use: 
 <pre>
 $ tar xvf openstack-mitaka-installer-0.x.x.tar
@@ -18,18 +19,22 @@ $ cd openstack-mitaka-installer
 
 modify ./install-paramrc.sh file to set parameter
 values as you'd like. 
-
+<pre>
 $ vi ./install-paramrc.sh
+</pre>
 
 substitute the parameter values in the script 
 template tar file. 
 
+<pre>
 $ ./exe-config-installer.sh
+</pre>
 
 Install openstack on controller, network, compute, and compute1.
 If you want to install OpenStack mitaka with classic open vswitch 
 network, run the following commands.
 
+<pre>
 $ cd OPSInstaller/installer
 $ ./OS-installer-00-1...(please fill in the rest of the name)
 $ ./OS-installer-00-2...
@@ -43,10 +48,12 @@ $ ./OS-installer-07-...
 $ ./OS-installer-08-...
 (skip ./OS-installer-09-...)
 $ ./OS-installer-10-...
+</pre>
 
 In case you want to install OpenStack mitaka and deploy 
 Distributed Virtual Router (DVR) network, run the following commands. 
 
+<pre>
 $ cd OPSInstaller/installer
 $ ./OS-installer-00-1...(please fill in the rest of the name)
 $ ./OS-installer-00-2...
@@ -60,6 +67,7 @@ $ ./OS-installer-07-...
 $ ./OS-installer-08-...
 $ ./OS-installer-09-...
 $ ./OS-installer-10-...
+</pre>
 
 This installation package also contains a set of scripts for 
 OpenStack mitaka and OpenDayLight (ODL) Beryllium integration.  
@@ -71,6 +79,7 @@ routers, and networks from your OpenStack deployment.
 Make sure the ODL host is running and necessary ODL features 
 are installed. Then, run
 
+<pre>
 $ cd OPSInstaller/installer
 $ ./OSODL-ovs-00-...
 $ ./OSODL-ovs-01-...
@@ -80,6 +89,7 @@ $ ./OSODL-ovs-04-...
 $ ./OSODL-ovs-05-...
 $ ./OSODL-ovs-06-...
 $ ./OSODL-ovs-07-...
+</pre>
 
 Note: This script is written for educational purpose. 
 
