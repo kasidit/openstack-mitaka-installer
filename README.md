@@ -11,13 +11,16 @@ Thammasat University.
 You will issue every instruction on the controller node
 of your OpenStack deployment. 
 
-To use: 
+First, login to the your openstack account on the controller node and invoke 
+the following commands to obtain this OpenStack installer script. 
 <pre>
+$ cd $HOME
+$ git clone https://github.com/kasidit/openstack-mitaka-installer
 $ cd openstack-mitaka-installer
 </pre>
 
 In our example, we follow the example
-configuration parameters in the official installation manual of 
+configuration parameters in the <a href="http://docs.openstack.org/mitaka/install-guide-ubuntu/">official installation manual (using ubuntu)</a> of 
 openstack as illustrated in the picture below.<br> 
 <img src="documents/architecture.png"> <br>
 From the figure, we use the same configuration as those of OpenStack installation 
