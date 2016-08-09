@@ -135,5 +135,6 @@ documents:
 1. http://sciencecloud-community.cs.tu.ac.th/ 
 2. http://vasabilab.cs.tu.ac.th/ 
 3. http://docs.openstack.org/
-4. <a href="https://www.youtube.com/playlist?list=PLmUxMbTCUhr4bjpV3ysL6_G_tokfpNyDb">OpenStack and OpenDayLight integration youtube video</a>
+4. <a href="https://www.youtube.com/playlist?list=PLmUxMbTCUhr4tJhdkREiJdIMJo-P-vX2M">OpenStack Mitaka installation with Distributed Virtual Router videos</a>
+5. <a href="https://www.youtube.com/playlist?list=PLmUxMbTCUhr4bjpV3ysL6_G_tokfpNyDb">OpenStack and OpenDayLight integration youtube videos</a>
  
