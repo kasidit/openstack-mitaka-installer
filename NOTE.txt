@@ -1,0 +1,5 @@
+The scripts are developed using text substitution techniques. 
+
+1. Keyword substitution. Openstack configuration parameters are defined 
+to have initial value string at first. These value string would then be subsituted
+by user-defined environment variables' values. 
