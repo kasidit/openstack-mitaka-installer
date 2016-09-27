@@ -40,9 +40,14 @@ environment variables' values that fit your deployment.
 $ vi ./install-paramrc.sh
 </pre>
 
+<<<<<<< HEAD
 You may view an example of this file <a href="./install-paramrc.sh">here</a>. After that, run the script below to substitute the parameter values in the script 
 template tar file (OPSInstaller-init.tar). <b>PLEASE RUN EVERY SCRIPT DESCRIBED HERE AS 
 A USER. DO NOT USE SUDO TO RUN THE SCRIPTS!</b> 
+=======
+After that, run the script below to substitute the parameter values in the script 
+template tar file (OPSInstaller-init.tar).  
+>>>>>>> 160335237f27ab7ce549bfeed80f390406977806
 
 <pre>
 $ ./exe-config-installer.sh
@@ -50,6 +55,7 @@ $ ./exe-config-installer.sh
 
 After running the script, you should see a new directory "OPSInstaller" being created. 
 This directory contains all scripts and configuration files that will later be run on every node 
+<<<<<<< HEAD
 to install OpenStack. The details of every script in the "OPSInstaller" can be seen in the 
 <pre>
 OPSInstaller/scriptmap.html
@@ -63,6 +69,9 @@ in the
 <a href="documents/OPSInstaller.example/scriptmap.html">documents//OPSInstaller.example/scriptmap.html</a> 
 </pre>
 file in the document directory. If you want to install OpenStack manually, you may follow the <a href="http://docs.openstack.org/mitaka/install-guide-ubuntu/">OpenStack Mitaka Installation Guide</a> and refer to information in the scriptmap.html file as example. 
+=======
+to install OpenStack.
+>>>>>>> 160335237f27ab7ce549bfeed80f390406977806
 
 <strong><u>
 1. install OpenStack mitaka with classic open vswitch network
@@ -75,6 +84,7 @@ $ cd openstack-mitaka-installer
 $ cd OPSInstaller/installer
 $ ./OS-installer-00-1...(please fill in the rest of the name)
 $ ./OS-installer-00-2...
+<<<<<<< HEAD
 </pre>
 <p>
 The last script will reboot all hosts. You have to login to the controller node again and make sure that every other node is up before continue the installation. 
@@ -82,6 +92,8 @@ The last script will reboot all hosts. You have to login to the controller node 
 $ cd $HOME
 $ cd openstack-mitaka-installer
 $ cd OPSInstaller/installer
+=======
+>>>>>>> 160335237f27ab7ce549bfeed80f390406977806
 $ ./OS-installer-01-...
 $ ./OS-installer-02-...
 $ ./OS-installer-03-...
@@ -105,6 +117,7 @@ $ cd openstack-mitaka-installer
 $ cd OPSInstaller/installer
 $ ./OS-installer-00-1...(please fill in the rest of the name)
 $ ./OS-installer-00-2...
+<<<<<<< HEAD
 </pre>
 <p>
 The last script will reboot all hosts. You have to login to the controller node again and make sure that every other node is up before continue the installation. 
@@ -112,6 +125,8 @@ The last script will reboot all hosts. You have to login to the controller node 
 $ cd $HOME
 $ cd openstack-mitaka-installer
 $ cd OPSInstaller/installer
+=======
+>>>>>>> 160335237f27ab7ce549bfeed80f390406977806
 $ ./OS-installer-01-...
 $ ./OS-installer-02-...
 $ ./OS-installer-03-...
