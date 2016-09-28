@@ -55,7 +55,7 @@ to install OpenStack. The details of every script in the "OPSInstaller" can be s
 OPSInstaller/scriptmap.html
 </pre> 
 file. To view this file, you may have to copy the whole "OPSInstaller" directory out from the 
-controller to your PC and use a browser to view the file. You may also take a look at an example of the scriptmap.html file in "documents/OPSInstaller.example" directory. 
+controller to your PC and use a browser to view the file. You may also take a look at an example of the scriptmap.html file in "documents/OPSInstaller.example" directory. An exampe  scriptmap.html file is also available at <a href="http://vasabilab.cs.tu.ac.th/presentations/OPSInstaller.example/scriptmap.html">http://vasabilab.cs.tu.ac.th/presentations/OPSInstaller.example/scriptmap.html</a>. 
 
 <strong><u>
 1. install OpenStack mitaka with classic open vswitch network
