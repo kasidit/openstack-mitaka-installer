@@ -8,6 +8,30 @@ department of computer science <br>
 faculty of science and technology <br>
 Thammasat University.
 
+NOTE: This "compact" version only run on 3 openstack nodes: controller, network and compute.
+We create this version in order to try to install OpenStack mitaka on a notebook that has 
+only 8GB Ram. So, we will ignore the "compute1" node in the original branch.  In the 
+file "install-paramrc.sh", please leave parameters related to compute1 be as defined 
+in the original example parameter values. In other words, don't touch the following 
+parameters. Just leave it there to make the srcipt run properly. We will not use any of it anyway.
+<pre>
+#
+# ---- compute1 host ----
+#
+export COMPUTE1_IP=10.0.0.32
+export COMPUTE1_IP_NIC=eth0
+export DATA_TUNNEL_COMPUTE1_NODE_IP=10.0.1.32
+export DATA_TUNNEL_COMPUTE1_NODE_IP_NIC=eth1
+export VLAN_COMPUTE1_NODE_IP_NIC=eth2
+#
+</pre>  
+Then follow the original instructions below to install OpenStack. 
+
+Also, if you want to do the OpenStack OpenDayLight integration, you probably have to 
+use ODL controller outside the installation host (due to insufficient memory). 
+
+------------------ORIGINAL INSTRUCTIONS-----------------------
+
 You will issue every instruction on the controller node
 of your OpenStack deployment. 
 
