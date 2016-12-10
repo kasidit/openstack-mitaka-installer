@@ -30,8 +30,6 @@ Then follow the original instructions below to install OpenStack.
 Also, if you want to do the OpenStack OpenDayLight integration, you probably have to 
 use ODL controller outside the installation host (due to insufficient memory). 
 
-------------------ORIGINAL INSTRUCTIONS-----------------------
-
 You will issue every instruction on the controller node
 of your OpenStack deployment. 
 
@@ -39,9 +37,12 @@ First, login to the your openstack account on the controller node and invoke
 the following commands to obtain this OpenStack installer script. 
 <pre>
 $ cd $HOME
-$ git clone https://github.com/kasidit/openstack-mitaka-installer
+$ git clone https://github.com/kasidit/openstack-mitaka-installer --branch openstack-mitaka-compact-installer
 $ cd openstack-mitaka-installer
 </pre>
+
+
+------------------ORIGINAL INSTRUCTIONS-----------------------
 
 In our example, we follow the example
 configuration parameters in the <a href="http://docs.openstack.org/mitaka/install-guide-ubuntu/">official installation manual (using ubuntu)</a> of 

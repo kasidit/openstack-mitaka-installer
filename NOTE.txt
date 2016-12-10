@@ -1,5 +1,8 @@
-The scripts are developed using text substitution techniques. 
+The scripts are developed using simple text substitution techniques. 
 
-1. Keyword substitution. Openstack configuration parameters are defined 
+Openstack configuration parameters are defined 
 to have initial value string at first. These value string would then be subsituted
-by user-defined environment variables' values. 
+by user-defined environment variables' values when running the ./exe-config.sh command. 
+
+This openstack-mitaka0-compact-installer branch only uses 3 nodes: controller, network, and compute.
+It was designed for a notebook with a minimal 8GB Ram.
